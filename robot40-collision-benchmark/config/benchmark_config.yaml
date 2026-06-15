@@ -1,0 +1,36 @@
+mesh_path:
+  - "../robot40proj-robot40human_ws-9a17e02688ad/src/robot40_description/meshes/rg6/collision/rg6_with_mount.stl"
+  - "../robot40proj-robot40human_ws-9a17e02688ad/src/robot40_description/meshes/rg6/collision/base_link.stl"
+  - "../robot40proj-robot40human_ws-9a17e02688ad/src/robot40_description/meshes/bases/robot40_base_lr_reduced0p015.stl"
+output_file:
+  - "./benchmark_results_robot40.csv"
+seed:
+  - 42
+randomization_method:
+  - "uniform"
+  - "surface_noise"
+num_points:
+  - 100
+  - 5000
+  - 25000
+randomization_std:
+  - 0.01
+sampling_x_dim:
+  - 0.5
+sampling_y_dim:
+  - 0.3
+sampling_z_dim:
+  - 0.6
+num_runs:
+  - 5
+warmup_runs:
+  - 1
+voxelization_res:
+  - 0.01
+methods:
+  - "trimesh"
+  # - "trimesh_voxelized"
+  - "open3d"
+  - "open3d_sdf"
+  # - "igl" 
+  # - "vtk"
